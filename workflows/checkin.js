@@ -280,7 +280,7 @@ class CheckIn {
       .join("\n");
 
     return `
-掘友: ${this.username}
+阳光大男孩:  🐬 ${this.username}
 ${
   {
     0: "签到失败",
@@ -311,7 +311,7 @@ ${
 预测All In矿石累计幸运值比率 ${(this.lotteriesTask.luckyValueProbability * 100).toFixed(2) + "%"}
 抽奖总次数 ${this.lotteriesTask.lotteryCount}
 免费抽奖次数 ${this.lotteriesTask.freeCount}
-${this.lotteriesTask.lotteryCount > 0 ? "==============\n" + drawLotteryHistory + "\n==============" : ""}
+${this.lotteriesTask.lotteryCount > 0 ? "🐬🐬🐬🐬🐬🐬🐬🐬🐬🐬🐬🐬🐬🐬\n" + drawLotteryHistory + "\n🐬🐬🐬🐬🐬🐬🐬🐬🐬🐬🐬🐬🐬🐬🐬🐬" : ""}
 `.trim();
   }
 }
@@ -333,7 +333,7 @@ async function run(args) {
 
   const message = messageList.join(`\n${"-".repeat(15)}\n`);
   notification.pushMessage({
-    title: "掘金每日签到",
+    title: "稀土掘金自动化-回执",
     content: message,
     msgtype: "text"
   });
@@ -341,7 +341,7 @@ async function run(args) {
 
 run(process.argv.splice(2)).catch(error => {
   notification.pushMessage({
-    title: "掘金每日签到",
+    title: "稀土掘金自动化-异常",
     content: `<strong>Error</strong><pre>${error.message}</pre>`,
     msgtype: "html"
   });
