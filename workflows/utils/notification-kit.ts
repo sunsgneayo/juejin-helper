@@ -82,14 +82,14 @@ export class NotificationKit {
     ${options.msgtype === "html" ? options.content : `<pre style="margin: 0;">${options.content}</pre>`}
   </main>
   <footer class="jj-footer">
-    <span>稀土掘金助手v${pkg.version}</span> |
-    <span>Copyright © ${new Date().getFullYear()} Derek Li.</span>
+    <span>稀土掘金自动化v${pkg.version}</span> |
+    <span>Copyright © ${new Date().getFullYear()} sunsgne </span>
   </footer>
 </section>
 `.trim();
 
     await transporter.sendMail({
-      from: `稀土掘金助手 <${auth.user}>`, // sender address（'"Fred Foo 👻" <foo@example.com>'）
+      from: `稀土掘金自动化 <${auth.user}>`, // sender address（'"Fred Foo 👻" <foo@example.com>'）
       to: env.EMAIL_TO, // list of receivers
       subject: options.title, // Subject line
       // text, // plain text body
